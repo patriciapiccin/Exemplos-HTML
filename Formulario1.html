@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Formulário</title>
-</head>
-<body>
-<h1 align="center"><strong><em>Formulário de Cadastro Pessoa Física</em>
-</strong></h1>
-<form>
-<p>
-<label>Nome:
-	<input type="text" name="nome" size="40"/></label>
-</p>
-<p>
-<label>CPF: 
-      <input type="text" name="cpf" size="15"/></label>
-</p>
-<p>
-<label>RG:
-<input type="text" name="rg" size="15"/></label>
-</p>
-<p>Sexo:</p>
-<p>
-<label>
-	<input type="radio" name="Sexo" value="M"/>Masculino</label>
-<br/>
-<label>
-      <input type="radio" name="Sexo" value="F"/>
-      Feminino</label>
-  </p>
-  <p><br />
-    <label>Estado:
+  <head>
+    <meta charset=utf-8>
+    <title>Formulário</title>
+  </head>
+  <body>
+   <h1 align="center"><b>Formulário de Cadastro Pessoa Física</b></h1>
+   <form>
+      <p>
+        <label>Nome:<input type="text" name="nome" size="40" 
+          value="Digite o nome">
+        </label>
+      </p>
+
+      <p>
+        <label>CPF:<input type="text" name="cpf" size="15"></label>
+      </p>
+      <p>
+
+        <label>RG:<input type="text" name="rg" size="15"></label>
+      </p>
+
+      <br>Sexo:
+      <br>
+      <label><input type="radio" name="Sexo" value="M">Masculino</label>
+      <br>
+      <label><input type="radio" name="Sexo" value="F">Feminino</label>
+
+      <p><br>
+      <label>Estado:
       <select name="estado">
         <option value="sp">São Paulo</option>
         <option value="rj">Rio de Janeiro</option>
@@ -73,25 +71,17 @@
       </select>
     </label>
   </p>
+  
   <p>
-    <label>Peso:
-      <input type="text" name="peso"/>
-    </label>
+    <label>Peso:<input type="text" name="peso"></label>
   </p>
+  
   <p>
-    <label>Altura:
-      <input type="text" name="altura"/>
-    </label>
+    <label>Altura:<input type="text" name="altura"></label>
   </p>
-  <p>
-    <label>
-      <input type="submit" name="Cadastrar" />
-    </label>
-    <label>
-      <input type="reset" name="limpar"/>
-    </label>
-  </p>
-
+  
+  <label><input type="submit" name="cadastrar" value="Cadastrar"> </label>
+  <label> <input type="reset" name="limpar" value = "Limpar"> </label>
 </form>
 </body>
 </html>
