@@ -1,40 +1,39 @@
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset=utf-8">
+    <title>Formulário 2</title>
 </head>
 <body>
-<center>
-<h2>Formulario</h2>
-<br><br>
-<form action="teste.html" method="post">
-
-Nome Completo:<input type="text" name="nome" size="60" maxlength="20">
-<p>
-E-mail:<input type="text" name="email" size="60" maxlength="20"
- value="@">
-<p>
-Sim/Nao
-<select name="multipla escolha">
-<option>Sim</option>
-<option>Nao</option>
-</select>
-<p>
-Multipla Escolha:
-<p>
-<input type="checkbox" name="opcao1">Opcao 1<br>
-<input type="checkbox" name="opcao2">Opcao 2<br>
-<p>
-Mensagem:
-<p>
-<textarea name="mensagem" rows="15" cols="30"></textarea>
-<p>
-Comentarios
-<p>
-<textarea name="comentarios" rows="15" cols="30"></textarea>
-<p>
-<input type="submit" value="Enviar">
-<input type="reset" value="Apagar Tudo">
-</form>
-</center>
+    <center>
+    <h2>Formulario</h2>
+    <br><br>
+        <form action="teste.html" method="post">
+            <p>
+            <label>Nome Completo:<input type="text" name="nome" size="60" maxlength="20"></label>
+            </p>
+            <p>
+            <label>E-mail:<input type="text" name="email" size="60" maxlength="20" value="@"></label>
+            </p>
+            Sim/Nao
+            <select name="multipla_escolha">
+                <option>Sim</option>
+                <option>Nao</option>
+            </select>
+            <p>Multipla Escolha:</p>
+            <p>
+            <input type="checkbox" name="opcao1">Opcao 1<br>
+            <input type="checkbox" name="opcao2">Opcao 2<br>
+            </p>
+            <p>Mensagem:</p>
+            <p><textarea name="mensagem" rows="15" cols="30"></textarea></p>
+            <p>Comentários</p>
+            <p><textarea name="comentarios" rows="15" cols="30"></textarea></p>
+            <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Apagar Tudo">
+            </p>
+    </form>
+    </center>
 </body>
 </html>
