@@ -1,38 +1,49 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-<title>Exemplo Validação de Formulário com HTML5 </title>
-<style>
-    #email:valid {background:#006600;color:#fff}
-    #email:invalid {background:#990000; color:#fff}
-	form{border:1px solid #666;margin:10px;}
-</style>
+	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+	<title>Exemplo Validação de Formulário com HTML5 </title>
+	<style>
+    	#email:valid {background:#006600;color:#fff}
+    	#email:invalid {background:#990000; color:#fff}
+		form{border:1px solid #666;margin:10px;}
+	</style>
 </head>
 <body>
-    <form method="post" action="">
-    	<label for="nome">Nome: </label><input id="nome" type="text"required name=nome>
+    <form method="post">
+		<label for="nome">Nome: </label>
+		<input id="nome" type="text" required>
     	<input type=submit value="OK"> Exemplo de campo com required
     </form>
  
-	<form method="get" action="">
-		<!--Comentário-->
-    	<label for="email">E-mail: </label><input id="email" type="email" required name=email>
-    	<input type=submit value="OK"> Exemplo de campo com required e type=email mais exemplo pseudoclasse :valid e :invalid
+	<form method="get">
+		<label for="email">E-mail: </label>
+		<input id="email" type="email" required>
+		<input type="submit" value="OK"> 
+		Exemplo de campo com required e type=email 
+		mais exemplo pseudoclasse :valid e :invalid
 	</form>
 
-    <form method="post" action="">
-    	<label for="site">Site: </label><input id="site" type=url required name=site>
-    	<input type=submit value="OK"> Exemplo de campo com required e type=url
+    <form method="post">
+		<label for="site">Site: </label>
+		<input id="site" type="url" required>
+		<input type="submit" value="OK"> 
+		Exemplo de campo com required e type=url
     </form>
 
-	<form method="get" action="">
-   		<label for="telefone">Telefone: </label><input required name="tel" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4}">(xx) xxxx-xxxx
-   		<input type=submit value=Enviar> Exemplo de campo com pattern. Máscara de entrada \([0-9]{2}\)[\s][0-9]{4}-[0-9]{4}
+	<form method="get">
+		   <label for="telefone">Telefone: </label>
+		   <input required name="tel" 
+		   pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4}">(xx) xxxx-xxxx
+		   <input type="submit" value="Enviar"> Exemplo de campo com pattern. 
+		   Máscara de entrada \([0-9]{2}\)[\s][0-9]{4}-[0-9]{4}
 	</form>
 
+	<!--parei aqui-->
 	<form method="get" action="">
-   		<label for="cep">CEP: </label><input required name="cep" value pattern="[0-9]{5}-[0-9]{3}">xxxxx-xxx
+   		<label for="cep">CEP: 
+
+		   </label><input required name="cep" pattern="[0-9]{5}-[0-9]{3}">xxxxx-xxx
    		<input type=submit value=Enviar> Exemplo de campo com pattern. Máscara de entrada [0-9]{5}-[0-9]{3}
 	</form>
 
