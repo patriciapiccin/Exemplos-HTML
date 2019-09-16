@@ -1,0 +1,40 @@
+*{ /*Seleciona todos os elementos*/	
+    margin: 0px;
+	padding: 0px;
+}
+body { /*seleciona todos os elementos <body>*/
+	background-color: #ddd;
+	}
+
+#conteudo { /*Seleciona o elemento com id="conteudo"*/
+	width: 800px;
+	margin: 0 auto;
+	background-color: white;
+	border: 1px solid #333;
+	padding: 10px;
+}
+
+.cancelado { /*Seleciona todos os elementos com class="cancelado"*/
+	text-decoration: line-through;
+}
+
+ul{ /*Seleciona todos os elementos com <ul>*/ 
+	padding: 0 0 0 40px;
+	list-style-type: none;
+}
+
+ul li{ /*Seleciona todos os elementos <li> dentro de elementos <ul>*/
+	color: blue;
+}
+
+#conteudo > ul > li { /*Seleciona todos os elementos <li> onde o pai é um elemento <ul> com o pai elemento com id="conteudo"*/
+	margin: 0 0 20px 0;
+}
+	
+ul + p { /*Seleciona todos os elementos <p> que são colocados imediatamente após elementos <ul>*/
+	color: red;
+}
+
+ul ~ p { /*Seleciona todos os elementos <p> precedidos por um elemento <ul>*/
+	font-style: italic ;
+}
