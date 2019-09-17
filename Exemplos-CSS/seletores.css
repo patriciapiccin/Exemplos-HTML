@@ -11,7 +11,7 @@ body { /*seleciona todos os elementos <body>*/
 	margin: 0 auto;
 	background-color: white;
 	border: 1px solid #333;
-	padding: 10px;
+	padding: 10px; /*padding-top, padding-right, padding-bottom	e padding-left*/
 }
 
 .cancelado { /*Seleciona todos os elementos com class="cancelado"*/

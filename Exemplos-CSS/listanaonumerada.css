@@ -1,0 +1,27 @@
+body {
+    background-color:#FFEFD5;
+}
+    
+ul.nada {
+    list-style-type: none;
+    color:#FA8072;
+    font-size:20px;
+}
+    
+ul.bolinha {
+    list-style-type: disc;
+    color:#FF6347;
+    font-size:20px;
+}
+    
+ul.quadrado {
+    list-style-type: square;
+    color:#FF4500;
+    font-size:20px;
+}
+    
+ul.circulo {
+    list-style-type: circle;
+    color:#0000EE;
+    font-size:20px;
+}
