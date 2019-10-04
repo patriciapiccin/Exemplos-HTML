@@ -4,7 +4,7 @@
 }
 body { /*seleciona todos os elementos <body>*/
 	background-color: #ddd;
-	}
+}
 
 #conteudo { /*Seleciona o elemento com id="conteudo"*/
 	width: 800px;
@@ -27,14 +27,17 @@ ul li{ /*Seleciona todos os elementos <li> dentro de elementos <ul>*/
 	color: blue;
 }
 
-#conteudo > ul > li { /*Seleciona todos os elementos <li> onde o pai é um elemento <ul> com o pai elemento com id="conteudo"*/
+#conteudo > ul > li { 
+	/*Seleciona todos os elementos <li> onde o pai é um elemento <ul> 
+	com o pai elemento com id="conteudo"*/
 	margin: 0 0 20px 0;
 }
 	
-ul + p { /*Seleciona todos os elementos <p> que são colocados imediatamente após elementos <ul>*/
+ul + p { /*Seleciona todos os elementos <p> que são colocados 
+	imediatamente após elementos <ul>*/
 	color: red;
 }
 
 ul ~ p { /*Seleciona todos os elementos <p> precedidos por um elemento <ul>*/
-	font-style: italic ;
+	font-style: italic;
 }

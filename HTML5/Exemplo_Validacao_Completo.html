@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
 	<title>Exemplo Validação de Formulário com HTML5 </title>
 	<style>
     	#email:valid {background:#006600;color:#fff}
@@ -40,18 +40,19 @@
 	</form>
 
 	<!--parei aqui-->
-	<form method="get" action="">
-   		<label for="cep">CEP: 
-
-		   </label><input required name="cep" pattern="[0-9]{5}-[0-9]{3}">xxxxx-xxx
-   		<input type=submit value=Enviar> Exemplo de campo com pattern. Máscara de entrada [0-9]{5}-[0-9]{3}
+	<form method="get">
+		   <label for="cep">CEP:</label>
+		   <input required name="cep" pattern="[0-9]{5}-[0-9]{3}">xxxxx-xxx
+		   <input type="submit" value="Enviar"> 
+		   Exemplo de campo com pattern. 
+		   Máscara de entrada [0-9]{5}-[0-9]{3}
 	</form>
 
 	<form method="post" action="" novalidate="novalidate">
   	   <label>nome: <input name="nome" required></label>
   	   <label>email: <input name="email" type="email" required></label>
-  		<input type="submit" name="action" value="Enviar"> Exemplo de campo com novalidate="novalidate"
+		  <input type="submit" name="action" value="Enviar"> 
+		  Exemplo de campo com novalidate="novalidate"
 	</form>
-
 </body>
 </html>
