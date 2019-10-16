@@ -1,3 +1,11 @@
+/*A propriedade padding define uma a distância entre o conteúdo de um elemento e suas bordas.*/
+
+/*margin: auto;
+Significa que o browser dará uma margem automática para todos os lados. 
+margin: 0; 
+Margem 0, significa que você não quer margem alguma*
+margin: 0; /* margem de todos os lados = 0 */
+
 *{ margin:0; padding:0;}
 
 body{ font:100% normal Arial, Helvetica, sans-serif; background:#ccc;}
@@ -5,10 +13,11 @@ body{ font:100% normal Arial, Helvetica, sans-serif; background:#ccc;}
 form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
 
 div.box {
-    margin:0 auto;
+    margin: 0 1px; /* top/bottom = 0; right/left = 1px*/
+    margin:0 auto; /* top/bottom = 0; right/left = auto*/
     width:500px;
     background:#176ca6;
-    position:relative;
+    position:relative; /*https://www.devmedia.com.br/como-usar-a-propriedade-position-css/24451*/
     top:50px;
     border:1px solid #262626;
 }
@@ -16,7 +25,7 @@ div.box {
 div.box h1 { 
     color:#ffffff;
     font-size:18px;
-    text-transform:uppercase;
+    text-transform:uppercase; /*coloca em maiúsculo*/
     padding:5px 0 5px 5px;
     border-bottom:1px solid #161712;
     border-top:1px solid #161712; 
@@ -24,7 +33,10 @@ div.box h1 {
 
 div.box label {
     width:100%;
-    display: block;
+    /*A declaração display: block faz com que o elemento HTML seja renderizado como bloco, 
+    tal como os parágrafos e os cabeçalhos o são. Um bloco contém um espaço em branco 
+    tanto em cima como embaixo e não permite outros elementos HTML ao lado*/
+    display: block; /*https://www.maujor.com/tutorial/propriedade-css-display.php*/
     background:#176ca6;
     border-top:1px solid #262626;
     border-bottom:1px solid #161712;
