@@ -47,6 +47,9 @@ header{
     margin: 0 auto;
     width: 940px;
 }
+/*Fundo cinza nas caixas de busca e no menu de departamentos. Além disso, 
+o texto deve estar em negrito e apresentado em maiúsculas.
+Foram aplicadas algumas regras de margens e de tamanhos*/
 
 .busca,.menu-departamentos {
     background-color: #DCDCDC;
@@ -60,9 +63,16 @@ header{
     margin: 10px;
 }
 
+/*o tamanho do campo de texto para melhor encaixar no design e use seletores de atributo do CSS*/
 .busca input[type=search] {
     width: 170px;
 }
+
+/*Para que o menu de departamentos e a busca estejam à esquerda na página, vamos flutuar esses
+elementos com float:left .
+Mas só isso fará com que o menu fique a direita da busca (faça o teste).
+Precisamos indicar ao menudepartamentos que ele deve flutuar à esquerda mas não ao lado de outro elemento. 
+Conseguimos isso com a propriedade clear */
 
 busca,.menu-departamentos {
 float: left;
@@ -77,10 +87,13 @@ clear: left;
     margin-bottom: 1px;
     padding: 5px 10px;
 }
+
  .menu-departamentos a {
     color: #333333;
     text-decoration: none;
 }
+
+/*Acerte as margens e posicionamentos no menu lateral e no topo:*/
 
 .destaque {
     margin-top: 10px;
