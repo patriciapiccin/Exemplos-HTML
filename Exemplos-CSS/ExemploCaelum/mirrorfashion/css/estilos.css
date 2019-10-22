@@ -4,6 +4,10 @@ body
     font-family: "Lucida Sans Unicode",	"Lucida	Grande", sans-serif;
 } 
 
+header{
+    position: relative;
+}
+
 .sacola	{	
     background-image:	url(../img/sacola.png);	
     background-repeat:	no-repeat;	
@@ -13,6 +17,16 @@ body
     padding-top: 8px;		
     text-align:	right;			
     width:	140px;	
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu-opcoes
+{
+    position:absolute;
+    bottom: 0;
+    right: 0;
 }
 .menu-opcoes ul	
 {			
@@ -34,6 +48,47 @@ body
     width: 940px;
 }
 
+.busca,.menu-departamentos {
+    background-color: #DCDCDC;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    width: 230px;
+}
+
+.busca h2,.busca form,.menu-departamentos h2 {
+    margin: 10px;
+}
+
+.busca input[type=search] {
+    width: 170px;
+}
+
+busca,.menu-departamentos {
+float: left;
+}
+
+.menu-departamentos {
+clear: left;
+}
+
+.menu-departamentos li {
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 5px 10px;
+}
+ .menu-departamentos a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.destaque {
+    margin-top: 10px;
+}
+.menu-departamentos {
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
 
 /*Elementos em bloco são aqueles que ocupam toda a largura do	documento, 
 tanto antes	 quanto depois deles. Um bom exemplo de elemento em bloco é a tag <h1>. 
@@ -50,4 +105,29 @@ Pode ser interessante alterarmos esse padrão de acordo com nossa necessidade, p
 propriedade	display no CSS,	que	permite	definir	qual estratégia	de exibição	o elemento utilizará.
 Por	exemplo, o elemento <li> de uma	<ul> tem por padrão	o valor	block para a propriedade display.	
 Se	quisermos os elementos na horizontal, basta	alterarmos a propriedade display da <li> para inline*/
+
+/*Resumo de postion
+static
+Sua posição é dada automaticamente pelo fluxo da página: por padrão ele é renderizado logo após seus irmãos
+Não aceita um posicionamento manual (left, right, top, bottom)
+O tamanho do seu elemento pai leva em conta o tamanho do elemento static
+
+relative
+Por padrão, o elemento será renderizado da mesma maneira que o static
+Aceita posicionamento manual
+O tamanho do seu elemento pai leva em conta o tamanho do elemento relative, porém sem levar em conta seu posicionamento. O pai não sofreria alterações mesmo se o elemento fosse static
+
+fixed
+Uma configuração de posicionamento vertical (left ou right) e uma horizontal (top ou bottom) é obrigatória
+O elemento será renderizado na página na posição indicada. Mesmo que ocorra uma rolagem, o elemento permanecerá no mesmo lugar
+Seu tamanho não conta para calcular o tamanho do elemento pai, é como se não fosse elemento filho
+
+absolute
+Uma configuração de posicionamento vertical (left ou right) e uma horizontal (top ou bottom) é obrigatória
+O elemento será renderizado na posição indicada, porém relativa ao primeiro elemento pai cujo position seja diferente de static ou, se não existir este pai, relativa à página
+Seu tamanho não conta para calcular o tamanho do elemento pai*/
+
+/*Posicione o menu à direita e embaixo no header. Use position: absolute para isso. E não
+esqueça: se queremos posicioná-lo absolutamente com relação ao cabeçalho, o cabeçalho precisa estar
+com position: relative .*/
 
