@@ -1,7 +1,53 @@
-.sacola	{	background-image:	url(../img/sacola.png);	background-repeat:	no-repeat;	
-    background-position:	top	right;
-    font-size:	14px;			padding-right:	35px;			text-align:	right;			width:	140px;	}
-.menu-opcoes	ul	{			font-size:	15px;	}
-.menu-opcoes	a	{				color:	#003366;	} 
+body
+{
+    color:	#333333;
+    font-family: "Lucida Sans Unicode",	"Lucida	Grande", sans-serif;
+} 
 
-body	{			color:	#333333;			font-family:	"Lucida	Sans	Unicode",	"Lucida	Grande",	sans-serif;	} 
+.sacola	{	
+    background-image:	url(../img/sacola.png);	
+    background-repeat:	no-repeat;	
+    background-position:	top	right;
+    font-size:	14px;			
+    padding-right:	35px;	
+    padding-top: 8px;		
+    text-align:	right;			
+    width:	140px;	
+}
+.menu-opcoes ul	
+{			
+    font-size:	15px;	
+}
+.menu-opcoes a
+{				
+    color:	#003366;	
+} 
+
+.menu-opcoes ul li{
+    display: inline;
+    margin-left: 20px;
+}
+
+.container
+{
+    margin: 0 auto;
+    width: 940px;
+}
+
+
+/*Elementos em bloco são aqueles que ocupam toda a largura do	documento, 
+tanto antes	 quanto depois deles. Um bom exemplo de elemento em bloco é a tag <h1>. 
+Note que não há nenhum outro elemento à esquerda ou à direita do nosso nome da loja, 
+apesar da expressão "Mirror Fashion” não ocupar toda a largura do documento. 
+Entre os elementos em bloco, podemos destacar as tags de heading <h1> a <h6>, 
+os parágrafos <p> e divisões <div>.
+Elementos em linha são aqueles que ocupam somente o espaço necessário para que seu próprio conteúdo 
+seja exibido, permitindo que outros elementos em linha possam ser renderizados 
+logo na sequência, seja	antes ou depois, exibindo diversos elementos nessa mesma linha. 
+Entre os elementos em linha, podemos destacar as tags de âncora <a>, 
+as tags de ênfase <small>, <strong> e <em> e a tag de marcação de atributos <span>.
+Pode ser interessante alterarmos esse padrão de acordo com nossa necessidade, por isso existe a
+propriedade	display no CSS,	que	permite	definir	qual estratégia	de exibição	o elemento utilizará.
+Por	exemplo, o elemento <li> de uma	<ul> tem por padrão	o valor	block para a propriedade display.	
+Se	quisermos os elementos na horizontal, basta	alterarmos a propriedade display da <li> para inline*/
+
