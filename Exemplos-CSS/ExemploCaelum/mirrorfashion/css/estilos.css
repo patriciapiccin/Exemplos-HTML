@@ -12,33 +12,42 @@ body
 }
 
 /*Posicione o menu à direita e embaixo no header. Use position: absolute para isso. E não
-esqueça: se queremos posicioná-lo absolutamente com relação ao cabeçalho, o cabeçalho precisa estar
-com position: relative.*/
+esqueça: se queremos posicioná-lo absolutamente com relação ao cabeçalho, 
+o cabeçalho precisa estar com position: relative.*/
 header{
     position: relative;
+}
+
+
+header h1 { /*alteração para mobile*/
+	text-align: center;
+}
+header h1 img { /*alteração para mobile*/
+	max-width: 50%;
 }
 
 /*A sacola também deve estar posicionada a direita e no topo. Use position , top e right para
 conseguir esse comportamento.*/
 
+
 .sacola	{	
     background-image:	url(../img/sacola.png);	
     background-repeat:	no-repeat;	
-    background-position:	top	right;
+    background-position: top right;
     font-size:	14px;			
     padding-right:	35px;	
     padding-top: 8px;		
     width:	140px;	
     position: absolute;
     top: 0;
-    right: 0;
+	right: 0;
+	display: none; /*alteração para mobile*/
 }
 
 .menu-opcoes
 {
-    position:absolute;
-    bottom: 0;
-    right: 0;
+	position: static; /*alteração para mobile*/
+	text-align: center; /*alteração para mobile*/
 }
 
 .menu-opcoes ul	
@@ -46,10 +55,10 @@ conseguir esse comportamento.*/
     font-size:	15px;	
 }
 
-/*Transformar nosso menu em horizontal e ajustar espaçamentos básicos.*/
+/*Transformar nosso menu em vertical e ajustar espaçamentos básicos.*/
 .menu-opcoes ul li{
-    display: inline;
-    margin-left: 20px;
+    display: inline-block; /*alteração para mobile*/
+    margin: 5px; /*alteração para mobile*/
 }
 
 .menu-opcoes a
@@ -61,7 +70,8 @@ conseguir esse comportamento.*/
 o texto deve estar em negrito e apresentado em maiúsculas.
 Foram aplicadas algumas regras de margens e de tamanhos*/
 
-.busca,.menu-departamentos {
+.busca,
+.menu-departamentos {
     background-color: #DCDCDC;
     font-weight: bold;
     text-transform: uppercase;
@@ -69,8 +79,18 @@ Foram aplicadas algumas regras de margens e de tamanhos*/
     
 }
 
-.busca h2,.busca form,.menu-departamentos h2 {
+.busca h2,
+.busca form,
+.menu-departamentos h2 {
     margin: 10px;
+}
+
+/*alteração para mobile*/
+.busca,
+.menu-departamentos,
+.banner-destaque img {
+margin-right: 0;
+width: 100%;
 }
 
 .menu-departamentos li {
@@ -93,9 +113,10 @@ Foram aplicadas algumas regras de margens e de tamanhos*/
 }
 
 /*Para que o menu de departamentos e a busca estejam à esquerda na página, vamos flutuar esses
-elementos com float:left .
+elementos com float:left.
 Mas só isso fará com que o menu fique a direita da busca (faça o teste).
-Precisamos indicar ao menudepartamentos que ele deve flutuar à esquerda mas não ao lado de outro elemento. 
+Precisamos indicar ao menudepartamentos que ele deve flutuar à esquerda mas
+não ao lado de outro elemento. 
 Conseguimos isso com a propriedade clear */
 
 .busca,
@@ -109,8 +130,7 @@ Conseguimos isso com a propriedade clear */
     clear: left;
 }
 
- /*Acerte as margens e posicionamentos no menu lateral e no topo:*/
-
+ /*Acerte as margens e posicionamentos no menu lateral e no topo*/
 .destaque {
     margin-top: 10px;
 }
@@ -119,10 +139,9 @@ Conseguimos isso com a propriedade clear */
 	margin-left: 10px;
 }
 
+/*alterado para mobile*/
 .painel {
-	margin: 10px 0;
-	padding: 10px;
-	width: 445px;
+	width: auto;
 }
 
 .novidades {
@@ -142,6 +161,12 @@ Conseguimos isso com a propriedade clear */
 
 	margin: 2px;
 	padding-bottom: 10px;
+	width: 30%; /*alterado para mobile*/
+}
+/*alterado para mobile*/
+.painel img
+{
+	width: 100%;
 }
 
 .painel h2 {
@@ -332,3 +357,60 @@ Seu tamanho não conta para calcular o tamanho do elemento pai*/
 esqueça: se queremos posicioná-lo absolutamente com relação ao cabeçalho, o cabeçalho precisa estar
 com position: relative .*/
 
+/*Mobile*/
+
+/*Nossa página hoje tem o tamanho fixo em 940px e é centralizada (com o uso do seletor .container).
+Para deixarmos a página mais flexível nos celulares, precisamos remover esse tamanho absoluto e
+colocar algum que faça mais sentido em telas menores, onde queremos ocupar quase que a tela toda,
+deixando apenas uma pequena margem. Para isso, adicione o código abaixo dentro da @media
+(max-width: 320px) do arquivo estilos.css*
+/*adaptação para mobile*/
+
+/*alterado para mobile*/
+@media (max-width: 939px) {
+	/* adicionar aqui os novos estilos para mobile */
+	.container {
+		width: 96%;
+	}
+
+	@media (min-width: 480px) {
+		header h1 {
+			margin: 5px 0;
+		}
+	
+		.menu-departamentos {
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+		}
+		.menu-departamentos nav > ul {
+			column-count: 2;
+		}
+	}
+	
+	@media (min-width: 720px) {
+		header h1 {
+			text-align: left;
+		}
+		.menu-opcoes {
+			position: absolute;
+		}
+		.sacola {
+			display: block;
+		}
+		.painel li {
+			width: 15%;
+		}
+		.busca,
+		.menu-departamentos {
+			margin-right: 1%;
+			width: 30%;
+		}
+		.menu-departamentos nav > ul {
+			column-count: 1;
+		}
+		.banner-destaque img {
+			width: 69%;
+		}
+	}
+
+}
