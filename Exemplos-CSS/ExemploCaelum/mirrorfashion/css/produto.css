@@ -30,25 +30,29 @@ label[for=azul]:after {
     top: 30px;
 }
 
-/*escondendo as bolinas padrão do input*/
+/*escondendo as bolinhas padrão do input*/
 .cores input[type=radio] {
     display: none;
 }
-/*Para fechar a funcionalidade de escolha das cores, falta exibir apenas a imagem atualmente
-selecionada. 
-Outra forma de falar isso é que devemos esconder as imagens dos radios não selecionados.*/
+/*Para fechar a funcionalidade de escolha das cores, 
+falta exibir apenas a imagem atualmente
+selecionada. Outra forma de falar isso é que 
+devemos esconder as imagens dos radios não selecionados.*/
 .cores input:not(:checked) + label img {
     display: none;
 }
 
-/*Com a troca de imagens funcionando, vamos implementar o posicionamento correto das bolinhas
-lado a lado. Para isso, use position: absolute já que seus tamanhos são conhecidos:*/
+/*Com a troca de imagens funcionando, 
+vamos implementar o posicionamento correto das bolinhas
+lado a lado. Para isso, use position: absolute já que seus 
+tamanhos são conhecidos:*/
 .cores {
     position: relative;
     padding-top: 80px;
 }
 
-/*As bolinhas ficaram sobrepostas na esquerda. Para corrigir, basta colocar uma coordenada left
+/*As bolinhas ficaram sobrepostas na esquerda. 
+Para corrigir, basta colocar uma coordenada left
 diferente para cada uma:*/
 label[for=verde]:after {
     left: 0;
@@ -62,17 +66,19 @@ label[for=azul]:after {
     left: 120px;
 }
 
-/*Um ponto importante de uma solução responsiva é que as imagens se adaptem ao tamanho da tela.
+/*Um ponto importante de uma solução responsiva é 
+que as imagens se adaptem ao tamanho da tela.
 Às vezes, usamos imagens maiores e, quando a tela é pequena, a imagem fica "vazando" para fora do
-elemento pai.
-Uma forma de corrigir esse problema é garantir que ela nunca passe o tamanho do pai com maxwidth*/
+elemento pai.Uma forma de corrigir esse problema é 
+garantir que ela nunca passe o tamanho do pai com maxwidth*/
 
 .cores label img {
     display: block;
     max-width: 100%;
 }
 
-/*Primeiro, detalhes de tipografia e espaçamento para toda página de produtos*/
+/*Primeiro, detalhes de tipografia e espaçamento 
+para toda página de produtos*/
 .produto {
     color: #333;
     line-height: 1.3;
@@ -98,7 +104,7 @@ Uma forma de corrigir esse problema é garantir que ela nunca passe o tamanho do
     text-transform: uppercase;
 }
 
-/*E por fim, o botão de comprar deve ficar em evidência:*/
+/*E por fim, o botão de comprar deve ficar em evidência*/
 .comprar {
     background: #91bd3c;
     border: none;
@@ -113,7 +119,8 @@ Uma forma de corrigir esse problema é garantir que ela nunca passe o tamanho do
     padding: 0.5em 1em;
     margin: 1em 0;
 }
-/*Quando selecionamos a bolinha, uma borda escura aparece. Use transition para fazer
+/*Quando selecionamos a bolinha, uma borda escura aparece. 
+Use transition para fazer
 a borda aparecer suavemente.
 Adicione o seletor no início de produto.css*/
 
@@ -122,12 +129,14 @@ Adicione o seletor no início de produto.css*/
     transition: 1s;
     cursor: pointer;
 }
-/*E podemos colocar também um estilo para quando passar o mouse em cima da bolinha, mostrando
-uma borda mais leve, adicionar também no início de produto.css*/
+/*E podemos colocar também um estilo para quando passar 
+o mouse em cima da bolinha, mostrando
+uma borda mais leve, 
+adicionar também no início de produto.css*/
 
 .cores label:hover:after {
     border: 6px solid rgba(0,0,0,0.1);
-}
+}/*parei aqui*/
 
 
 output {

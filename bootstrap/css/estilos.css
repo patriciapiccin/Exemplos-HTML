@@ -1,0 +1,69 @@
+#paineis-sobre {
+	margin-top: 20px;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+header {
+	background-image: url(../img/castelo.jpg);
+	background-size: cover;  /*capa do header*/
+	background-position: top center; /* eixo y em cima eixo x ao centro*/
+	height: 100%;
+	position: relative; /*posicionamento no pai com relação ao header*/
+}
+
+header h1 { /*anular as margens do bootstrap*/
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.topCasaFina-banner {
+	color:#FFF; /*texto branco*/
+	background-color: rgba(0,0,0,0.5);/*padrão de cores red green blue (três cores que formam todas as cores) e opacidade (transparência) 0 valor mais escuro possível*/
+	padding: 20px; /*espaçamento interno)*/
+	width: 80%; /*largura*/
+	border-radius: 8px; /*deixa as bordas arredondadas na imagem*/
+	position: absolute; 
+	top: 50%; /*vai se posicionar em relação ao header*/
+	/*transform: translateY(-50%);posicionar conforme a caixa no eixo vertical*/
+	left:50% /*empurrar da esquerda para a direita*/;
+	/*transform: translateX(-50%); posicionar conforme a caixa no eixo horizontal*/
+	transform: translate(-50%,-50%); /*posicionar conforme a caixa no eixo vertical e eixo horizontal*/
+	transition: 1s;
+}
+
+.titulo-depoimentos {
+	background-color: #0275D8;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: #FFF;
+	margin-bottom: 0;
+	font-size: 24px;
+}
+
+.contato-select,
+.grupo-radio {
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+}
+
+.grupo-radio .radio:first-child {
+	margin-top: 0;
+}
+
+footer {
+	background-color: #333;
+	color: #FFF;
+	padding: 20px;
+	margin-top: 10px;
+}
+
+footer address:last-child {
+	margin-bottom: 0;
+}
+	
+
